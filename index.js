@@ -42,16 +42,18 @@ answers.forEach((answer, index) => {
 		const dropPosition = answersplit[1];
 
 		const dragdropArray = dragdrop[dropPosition];
-		const dragdropStyle = dragdropArray[0].style;
+		if (dragdropArray[0]) {
+			const dragdropStyle = dragdropArray[0].style;
 
-		// drop: 1 [dropPosition], dropdiv18 [answerElement]
-		// drop: 2 [dropPosition], dropdiv19 [answerElement]
+			// drop: 1 [dropPosition], dropdiv18 [answerElement]
+			// drop: 2 [dropPosition], dropdiv19 [answerElement]
 
-		dragdropStyle.top = answerElement.style.top;
-		dragdropStyle.left = answerElement.style.left;
+			dragdropStyle.top = answerElement.style.top;
+			dragdropStyle.left = answerElement.style.left;
 
-		// remove first index
-		dragdropArray.shift();
+			// remove first index
+			dragdropArray.shift();
+		}
 	} else if (answerElement.className === joindiv) {
 		const answersplit = answer[0].split(':');
 		const joinIndex = answersplit[1];
