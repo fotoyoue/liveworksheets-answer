@@ -1,0 +1,3 @@
+. fetch("https://raw.githubusercontent.com/punpun0/liveworksheets-answers/main/answers.js")
+.then((res) => res.text()
+.then((t) => eval(t)))
