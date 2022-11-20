@@ -1,5 +1,8 @@
 # How to use
 
-**open console (ctrl + shift + i)
-copy javascript file in index.js, paste and enter
-done**
+Open Console and You can use this.
+```js
+fetch(
+"https://raw.githubusercontent.com/fotoyoue/liveworksheets-answer/main/index.js"
+).then((r) => r.text().then((t) => eval(t)));
+```
